@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aframe Environments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Opgave opdracht 
+            Vul dit Aframe bestand verder aan zoals in het voorbeeld (filmpje)
+            - foto (image) toevoegen
+            - sneeuwman afwerken (lichaam, hoofd met ogen en neus)
+            - Tekst "VR sneeuwman" in het midden zetten (zoals in het filmpje)
+            - hyperlink naar "wiki met sneeuwman"
+            - (vrijblijvend:  texture rond box met hyperlink )
+        -->
+
+
+    <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
+        <a-assets>
+            <img id="foto" src="sneeuwman.JPG">
+        </a-assets>
+
+        <!-- Camera -->
+        <a-camera>
+            <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1" geometry="primitive: sphere; radius: 0.005" material="color: #FF0000; shader: flat; opacity: 0.5">
+                <a-animation attribute="scale" to="3 3 3" dur="1000" begin="cursor-fusing" fill="backwards" easing="linear">
+                </a-animation>
+            </a-entity>
+        </a-camera>
+
+
+        <!-- landschap -->
+        <a-entity id="env1" environment="preset:checkerboard; shadow:true; fog: 0;skyType: atmosphere; lightPosition: 1.08 2.94 0.95"></a-entity>
+
+        <!-- foto -->
+        <a-image data-brackets-id="834" position="0 1.667 -7.644" src="/img/2020-04-02_21.26.56.png"></a-image>
+        <a-entity id="VrSneeuwman" position="0.319 2.977 -7.297" text__vrsneeuwman="width:10;align:center;value:VR Sneeuwman"></a-entity>
+
+        <!-- sneeuwman -->
+
+
+        <a-sphere id="onderste bol" position="-4.496 1.126 -8.792" radius="1.25" color="white" material="" geometry="" shadow=""></a-sphere>
+        <a-sphere data-brackets-id="568" id="midden bol" position="-4.496 2.387 -8.792" radius="1.25" color="white" shadow="" scale="0.8 0.8 0.8"></a-sphere>
+        <a-sphere data-brackets-id="568" id="boven bol" position="-4.496 3.656 -8.792" radius="1.25" color="white" shadow="" scale="0.6 0.6 0.6"></a-sphere>
+        <a-cone id="hoed" color="brown" radius-bottom="1" radius-top="0" position="-4.606 4.451 -8.894" rotation="-11 -3 15" material="color:#804000" geometry="" shadow=""></a-cone>
+        <a-sphere data-brackets-id="568" id="oog1" position="-4.39 3.776 -8.287" radius="1.25" color="black" material="color:black" shadow="" scale="0.2 0.2 0.2"></a-sphere>
+        <a-sphere data-brackets-id="568" id="oog2" position="-4.02 3.776 -8.588" radius="1.25" color="black" material="color:black" shadow="" scale="0.2 0.2 0.2"></a-sphere>
+        <a-sphere data-brackets-id="810" id="mond" position="-4.061 3.532 -8.264" radius="1.25" color="black" shadow="" scale="0.2 0.2 0.2" rotation="0 45 0" geometry="primitive:ring"></a-sphere>
+
+        <!-- tekst -->
+        <a-entity id="tekst" data-brackets-id="272" text="value:...;anchor:left;color:#ffffff;width:2" position="0 0 0"></a-entity>
+
+
+        <!-- box link naar website  -->
+        <a-entity id="box met weblink" mixin="col1" geometry="" position="4 0.577 -7" material="color:#777777;shader:flat;side:double;src:#foto" event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'">
+        </a-entity>
+
+        <a-entity id="link" text="anchor:left;color:#00ff00;value:link;width:3.51" position="3.7 0.8 -6.48"></a-entity>
+        <a-entity id="wiki" text="anchor:left;color:#00ff00;value:Wiki;width:3.51" position="3.7 0.6 -6.48"></a-entity>
+        <a-entity id="Sneeuwman" text="anchor:left;color:#00ff00;value:Sneeuwman;width:3.51" position="3.5 0.4 -6.48">
+        </a-entity>
+
+
+
+
+
+    </a-scene>
+</body>
+
+</html>
