@@ -13,7 +13,7 @@
 
 <body>
 
-    <!-- Opgave opdracht 
+        <!-- Opgave opdracht 
             Vul dit Aframe bestand verder aan zoals in het voorbeeld (filmpje)
             - foto (image) toevoegen
             - sneeuwman afwerken (lichaam, hoofd met ogen en neus)
@@ -23,7 +23,7 @@
         -->
 
 
-    <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
+        <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
         <a-assets>
             <img id="foto" src="sneeuwman.JPG">
         </a-assets>
@@ -38,15 +38,13 @@
 
 
         <!-- landschap -->
-        <a-entity id="env1" environment="preset:checkerboard; shadow:true; fog: 0;skyType: atmosphere; lightPosition: 1.08 2.94 0.95"></a-entity>
+        <a-entity data-brackets-id="16" id="env1" environment="groundColor2:#FFFFFF;groundColor:#ffffff;skyType:atmosphere;skyColor:#0d0d0d;horizonColor:#404040;lightPosition:1.08 2.94 0.95;flatShading:true;groundYScale:4.81;groundTexture:checkerboard;dressing:cubes;dressingColor:#9f9f9f;dressingScale:1.51;dressingVariance:5 20 5;grid:dots;shadow:true;preset:checkerboard"><a-entity position="0 50 0" light="intensity:0.5491298471525436;groundColor:#ffffff;type:hemisphere;color:#CEE4F0"></a-entity><a-entity position="1.08 2.94 0.95" light="intensity:0.5491298471525436;castShadow:true;shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10"></a-entity><a-entity rotation="-90 0 0" scale="1 1 4.81" shadow="cast:false"></a-entity><a-entity></a-entity><a-sky radius="200" theta-length="110" material="sunPosition:0.3299729489283994 0.8982596943050872 0.29025398285368464;shader:skyshader" geometry=""></a-sky><a-entity id="stars"></a-entity></a-entity>
 
         <!-- foto -->
         <a-image data-brackets-id="834" position="0 1.667 -7.644" src="2020-04-02_21.26.56.png"></a-image>
         <a-entity id="VrSneeuwman" position="0.319 2.977 -7.297" text__vrsneeuwman="width:10;align:center;value:VR Sneeuwman"></a-entity>
 
         <!-- sneeuwman -->
-
-
         <a-sphere id="onderste bol" position="-4.496 1.126 -8.792" radius="1.25" color="white" material="" geometry="" shadow=""></a-sphere>
         <a-sphere data-brackets-id="568" id="midden bol" position="-4.496 2.387 -8.792" radius="1.25" color="white" shadow="" scale="0.8 0.8 0.8"></a-sphere>
         <a-sphere data-brackets-id="568" id="boven bol" position="-4.496 3.656 -8.792" radius="1.25" color="white" shadow="" scale="0.6 0.6 0.6"></a-sphere>
@@ -55,6 +53,21 @@
         <a-sphere data-brackets-id="568" id="oog2" position="-4.02 3.776 -8.588" radius="1.25" color="black" material="color:black" shadow="" scale="0.2 0.2 0.2"></a-sphere>
         <a-sphere data-brackets-id="810" id="mond" position="-4.061 3.532 -8.264" radius="1.25" color="black" shadow="" scale="0.2 0.2 0.2" rotation="0 45 0" geometry="primitive:ring"></a-sphere>
 
+        <!--grogu-->
+            <a-entity data-brackets-id="206" id="grogu" position="-4.73 0 -6.758" rotation="-0.57 26.47 0">
+            <a-entity data-brackets-id="207" id="jas1" geometry="primitive:sphere" material="color:#964B00;roughness:1" position="-2 0.63403 -2"></a-entity>
+            <a-entity data-brackets-id="208" id="jas2" geometry="primitive:sphere" material="color:#964B00;roughness:1" position="-2 1.26944 -2"></a-entity>
+            <!-- armen-->
+            <a-box data-brackets-id="209" id="arm1" position="-3 1.5 -1.5" height="2" color="#FFC65D" material="color:#964B00" scale="0.5 0.5 0.5" rotation="90 0 45"></a-box>
+            <a-box data-brackets-id="210" id="arm2" position="-1 1.5 -1.5" height="2" color="#FFC65D" material="color:#964B00" scale="0.5 0.5 0.5" rotation="90 0 135"></a-box>
+            <a-entity data-brackets-id="211" geometry="primitive:dodecahedron" rotation="0 90 0" position="-3.42308 1.478 -1.128" material="color:#0c6e20" scale="0.4 0.4 0.4" id="hand1"></a-entity>
+            <a-entity data-brackets-id="212" geometry="primitive:dodecahedron" rotation="0 90 0" position="-0.57394 1.47847 -1.12778" material="color:#0c6e20" scale="0.4 0.4 0.4" id="hand2"></a-entity>
+            <!-- Hoofd-->
+            <a-entity data-brackets-id="213" geometry="primitive:sphere" rotation="0 90 0" position="-2 2.43398 -2" material="color:#0c6e20" scale="0.6 0.6 0.7" id="hoofd"></a-entity>
+            <a-entity data-brackets-id="214" geometry="primitive:cone" rotation="0 0 80" position="-3.03929 2.42232 -2" material="color:#0c6e20" scale="0.2 1 0.2" id="oor1"></a-entity>
+            <a-entity data-brackets-id="215" geometry="primitive:cone" rotation="0 0 -80" position="-1.02349 2.48651 -2" material="color:#0c6e20" scale="0.2 1 0.2" id="oor2"></a-entity>
+            </a-entity>
+            
         <!-- tekst -->
         <a-entity id="tekst" data-brackets-id="272" text="value:...;anchor:left;color:#ffffff;width:2" position="0 0 0"></a-entity>
 
@@ -62,15 +75,10 @@
         <!-- box link naar website  -->
         <a-entity id="box met weblink" mixin="col1" geometry="" position="4 0.577 -7" material="color:#777777;shader:flat;side:double;src:#foto" event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'">
         </a-entity>
-
         <a-entity id="link" text="anchor:left;color:#00ff00;value:link;width:3.51" position="3.7 0.8 -6.48"></a-entity>
         <a-entity id="wiki" text="anchor:left;color:#00ff00;value:Wiki;width:3.51" position="3.7 0.6 -6.48"></a-entity>
         <a-entity id="Sneeuwman" text="anchor:left;color:#00ff00;value:Sneeuwman;width:3.51" position="3.5 0.4 -6.48">
         </a-entity>
-
-
-
-
 
     </a-scene>
 </body>
