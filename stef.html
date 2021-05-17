@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aframe Environments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+        <a-scene data-brackets-id="2294" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+            <!-- Camera -->
+        <a-camera wasd-controls="enabled: false">
+            <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1" geometry="primitive: sphere;  radius: 0.005" material="color: #FF0000; shader: flat; opacity: 0.5">
+                <a-animation attribute="scale" to="3 3 3" dur="1000" begin="cursor-fusing" fill="backwards" easing="linear">
+                </a-animation>
+            </a-entity>
+        </a-camera>
+            <a-box data-brackets-id="2297" position="0 2.5 -2.75" rotation="" color="#ffffff" material="" geometry="" scale="5 5 0.5" src="Sdeur.jpg"></a-box>
+            <a-box data-brackets-id="2298" position="2.75039 2.5 0" rotation="0 90 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" src="sleutelmuur.jpg"></a-box>
+            <a-box data-brackets-id="2299" position="-2.75 2.5 0" rotation="0 -90 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" src="sleutelmuur.jpg"></a-box>
+            <a-box data-brackets-id="2300" position="0 2.5 2.75" rotation="0 180 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" visible="" src="Smuur.jpg"></a-box>
+            <a-box data-brackets-id="2301" position="0 5.25 0" rotation="90 180 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="6 6 0.5" src="Splafont.jpg"></a-box>
+            <a-box data-brackets-id="2302" position="0 0.55571 2.25579" rotation="45 0 0" color="#4CC3D9" material="color: #ffffff; side: double; roughness: 1.5" geometry="primitive: plane" scale="1 1 0.5" src="Skoevoet.png" event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'"></a-box>
+            <a-box data-brackets-id="2303" position="0 0.20342 0" rotation="90 180 0" color="#4CC3D9" material="color: #ffffff; side: double; roughness: 1.5" geometry="primitive: plane" scale="6 6 0.5" src="Svloer.jpg"></a-box>
+            
+        <div data-brackets-id="2304" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2305" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2306" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2307" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2308" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2309" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2310" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2311" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2312" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2313" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2314" class="a-loader-title" style="display: none;"></div><div class="a-loader-title" style="display: none;"></div></a-scene>
+</body>
+
+</html>

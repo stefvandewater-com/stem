@@ -13,25 +13,82 @@
 
 <body>
 
+    <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
+        <a-assets>
+        </a-assets>
 
-
-        <a-scene data-brackets-id="2294" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
-            <!-- Camera -->
+        <!-- Camera -->
         <a-camera wasd-controls="enabled: false">
             <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1" geometry="primitive: sphere;  radius: 0.005" material="color: #FF0000; shader: flat; opacity: 0.5">
                 <a-animation attribute="scale" to="3 3 3" dur="1000" begin="cursor-fusing" fill="backwards" easing="linear">
                 </a-animation>
             </a-entity>
         </a-camera>
-            <a-box data-brackets-id="2297" position="0 2.5 -2.75" rotation="" color="#ffffff" material="" geometry="" scale="5 5 0.5" src="deur.jpg"></a-box>
-            <a-box data-brackets-id="2298" position="2.75039 2.5 0" rotation="0 90 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" src="sleutelmuur.jpg"></a-box>
-            <a-box data-brackets-id="2299" position="-2.75 2.5 0" rotation="0 -90 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" src="sleutelmuur.jpg"></a-box>
-            <a-box data-brackets-id="2300" position="0 2.5 2.75" rotation="0 180 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="5 5 0.5" visible="" src="muur.jpg"></a-box>
-            <a-box data-brackets-id="2301" position="0 5.25 0" rotation="90 180 0" color="#4CC3D9" material="color: #ffffff" geometry="" scale="6 6 0.5" src="plafont.jpg"></a-box>
-            <a-box data-brackets-id="2302" position="0 0.55571 2.25579" rotation="45 0 0" color="#4CC3D9" material="color: #ffffff; side: double; roughness: 1.5" geometry="primitive: plane" scale="1 1 0.5" src="koevoet.png" event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'"></a-box>
-            <a-box data-brackets-id="2303" position="0 0.20342 0" rotation="90 180 0" color="#4CC3D9" material="color: #ffffff; side: double; roughness: 1.5" geometry="primitive: plane" scale="6 6 0.5" src="vloer.jpg"></a-box>
-            
-        <div data-brackets-id="2304" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2305" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2306" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2307" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2308" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2309" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2310" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2311" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2312" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2313" class="a-loader-title" style="display: none;"></div><div data-brackets-id="2314" class="a-loader-title" style="display: none;"></div><div class="a-loader-title" style="display: none;"></div></a-scene>
+
+
+        <!-- landschap -->
+        <a-entity environment="skyType: gradient;  groundTexture: walkernoise; groundColor: #808080; groundColor2: #FF0000;  dressingScale: 1"></a-entity>
+        
+        
+        
+        <!-- KAMER 1  -->
+        <a-box data-brackets-id="MUUR1" position="0 2 -5"  rotation="0 0 0"   scale="7 4 1" src="MUUR%20DEUR.jpg"></a-box>
+        <a-box data-brackets-id="MUUR2" position="-4 2 -1" rotation="0 90 0"  scale="7 4 1" src="MUUR.jpg"></a-box>
+        <a-box data-brackets-id="MUUR3" position="0 2 3"   rotation="0 0 0"   scale="7 4 1" src="MUUR.jpg"></a-box>
+        <a-box data-brackets-id="MUUR4" position="4 2 -1"  rotation="0 90 0"  scale="7 4 1" src="MUUR.jpg"></a-box>
+        <a-box data-brackets-id="PLAFON" position="0 4 -1"  rotation="90 0 0"  scale="7 7 1" src="PLAFON.jpg"></a-box>
+        <a-box data-brackets-id="spinnenweb" src="spinnenweb.png" position="2.974 3.29 -3.918" geometry="depth:0.5;width:0.5" scale="3.42 0.01 2.46" rotation="-42.88 -44.82 0"></a-box>
+        <a-box data-brackets-id="spinnenweb2" src="spinnenweb.png" position="2.999 3.231 2.05" geometry="depth:0.5;width:0.5" scale="3.42 0.01 2.46" rotation="40 45 0"></a-box>
+        
+        
+         <!--Stoel en Tafel-->
+         <a-entity id="stoel" position="-0.5 0 -2" rotation="0 145 0">
+
+            <!--Stoel Poten-->
+            <a-box id="poot 1" src="wood.png" data-brackets-id="16" position="0 0.225 -0.225" color="#A0522D" geometry="depth:0.05;height:0.45;width:0.05"></a-box>
+            <a-box id="poot 2" src="wood.png" data-brackets-id="16" position="0 0.225 0.225" color="#A0522D" geometry="depth:0.05;height:0.45;width:0.05"></a-box>
+
+            <a-box id="poot 3" src="wood.png" data-brackets-id="16" position="0.45 0.6 -0.225" color="#A0522D" geometry="depth:0.05;height:1.2;width:0.05"></a-box>
+            <a-box id="poot 4" src="wood.png" data-brackets-id="16" position="0.45 0.6 0.225" color="#A0522D" geometry="depth:0.05;height:1.2;width:0.05"></a-box>
+
+            <!--Stoel zitvlak-->
+            <a-box id="zitvlak" src="wood.png" data-brackets-id="558" position="0.22 0.45 0" color="#A0522D" geometry="depth:0.5;height:0.01;width:0.5"></a-box>
+
+            <!--Stoel overschot-->
+            <a-box id="steunpaal 1" src="wood.png" data-brackets-id="16" position="0.45 1 0" rotation="90 0 0" color="#A0522D" geometry="depth:0.05;height:0.45;width:0.05" scale="1 0.9 1"></a-box>
+            <a-box id="steunpaal 2" src="wood.png" data-brackets-id="16" position="0.45 0.8 0" rotation="90 0 0" color="#A0522D" geometry="depth:0.05;height:0.45;width:0.05" scale="1 0.9 1"></a-box>
+            <a-box id="steunpaal 3" src="wood.png" data-brackets-id="16" position="0.45 0.6 0" rotation="90 0 0" color="#A0522D" geometry="depth:0.05;height:0.45;width:0.05" scale="1 0.9 1"></a-box>
+            <a-sphere id="kussen" material="color:#FFFF00" src="pillow.png" data-brackets-id="783" position="0.2 0.5 0" radius="5" scale="0.055 0.01 0.055"></a-sphere>
+
+            <!--Tafel-->
+            <a-box id="tafelpoot 1" src="wood.png" data-brackets-id="16" position="-0.3 0.35 -0.45" color="#A0522D" geometry="depth:0.05;height:0.7;width:0.05"></a-box>
+            <a-box id="tafelpoot 2" src="wood.png" data-brackets-id="16" position="-0.3 0.35 0.45" color="#A0522D" geometry="depth:0.05;height:0.7;width:0.05"></a-box>
+            <a-box id="tafelpoot 3" src="wood.png" data-brackets-id="16" position="-1.75 0.35 0.45" color="#A0522D" geometry="depth:0.05;height:0.7;width:0.05"></a-box>
+            <a-box id="tafelpoot 4" src="wood.png" data-brackets-id="16" position="-1.75 0.35 -0.45" color="#A0522D" geometry="depth:0.05;height:0.7;width:0.05"></a-box>
+            <a-box id="tafelvlak" src="wood.png" data-brackets-id="85" position="-1.0699 0.7 0" color="#A0522D" geometry="depth:0.5;width:0.5" scale="3.42 0.01 2.46"></a-box>
+        </a-entity>
+
+           <!--pinguin-->
+          <a-entity id="pinguin" position="-2 -0.5 2.5" rotation="0 300 0" mixin="col1"
+        event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://stem.stefvandewater.com/stef.html'">>
+
+           
+            <a-sphere id="lichaam wit" material="color:#ffffff" data-brackets-id="783" position="-1.07 1.16 0" radius="5" scale="0.055 -0.09 0.055"></a-sphere>
+            <a-sphere id="lichaam zwart" material="color:#000000" data-brackets-id="783" position="-1.046 1.16 0.026" radius="5" scale="0.055 -0.09 0.055"></a-sphere>
+            <a-sphere id="poot 1" material="color:#4e4e46" data-brackets-id="783" position="-1.2 0.75 0.05" radius="5" scale="-0.015 -0.01 -0.045" rotation="0 -135.6 0"></a-sphere>
+            <a-sphere id="poot 2" material="color:#4e4e46" data-brackets-id="783" position="-1.01 0.75 -0.15" radius="5" scale="-0.015 -0.01 -0.045" rotation="0 -135.6 0"></a-sphere>
+            <a-sphere id="arm 1" material="color:#000000" data-brackets-id="783" position="-0.87228 1.16565 -0.14915" radius="5" scale="0.015 0.08 0.035" rotation="0.07 -134.72 -0.11"></a-sphere>
+            <a-sphere id="arm 2" material="color:#000000" data-brackets-id="783" position="-1.25098 1.16565 0.14623" radius="5" scale="0.015 0.08 0.035" rotation="0.07 -134.72 -0.11"></a-sphere>
+            <a-sphere id="hoofd" material="color:#000000" data-brackets-id="783" position="-1.07 1.67618 0" radius="5" scale="0.03 0.03 0.03"></a-sphere>
+            <a-cone data-brackets-id="62" id="neus" position="-1.18 1.656 -0.161" rotation="0.69 120 -90.46" color="orange" scale="0.05 0.31 0.04"></a-cone>
+            <a-sphere data-brackets-id="64" id="oog 1" material="color:#ffffff" position="-1.08846 1.71101 -0.13959" radius="5" scale="0.003 0.003 0.003"></a-sphere>
+            <a-sphere data-brackets-id="64" id="oog 2" material="color:#ffffff" position="-1.21003 1.71101 -0.05687" radius="5" scale="0.003 0.003 0.003"></a-sphere>
+        </a-entity>
+
+        
+
+
+    </a-scene>
 </body>
 
 </html>
