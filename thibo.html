@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aframe Environments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+</head>
+
+<body>
+
+    <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
+        <a-assets>
+        </a-assets>
+
+        <!-- Camera -->
+        <a-camera wasd-controls="enabled: false">
+            <a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1" geometry="primitive: sphere;  radius: 0.005" material="color: #FF0000; shader: flat; opacity: 0.5">
+                <a-animation attribute="scale" to="3 3 3" dur="1000" begin="cursor-fusing" fill="backwards" easing="linear">
+                </a-animation>
+            </a-entity>
+        </a-camera>
+
+
+        
+        
+        
+        <!-- KAMER 1  -->
+        <a-box data-brackets-id="MUUR1" position="0 2 -5"  rotation="0 0 0"   scale="7 4 1" src="MUUR%20SCHILDERIJ.jpg"></a-box>
+        <a-box data-brackets-id="MUUR2" position="-4 2 -1" rotation="0 90 0"  scale="7 4 1" src="TMUUR.jpg"></a-box>
+        <a-box data-brackets-id="MUUR3" position="0 2 3"   rotation="0 0 0"   scale="7 4 1" src="TMUUR.jpg"></a-box>
+        <a-box data-brackets-id="MUUR4" position="4 2 -1"  rotation="0 90 0"  scale="7 4 1" src="TMUUR.jpg"></a-box>
+        <a-box data-brackets-id="PLAFON" position="0 4 -1"  rotation="90 0 0"  scale="7 7 1" src="TPLAFON.jpg"></a-box>
+        <a-box data-brackets-id="PLAFON" position="0 -0.500 -1"  rotation="90 0 0"  scale="7 7 1" src="TVLOER.jpg"></a-box>
+        <a-box data-brackets-id="spinnenweb" src="Tspinnenweb.png" position="-3 3.29 -3.918" geometry="depth:0.5;width:0.5" scale="3.42 0.01 2.46" rotation="-42.88 44.82 0"></a-box>
+        <a-box data-brackets-id="spinnenweb2" src="Tspinnenweb.png" position="2.999 0.228 2.05" geometry="depth:0.5;width:0.5" scale="3.42 0.01 2.46" rotation="-40 45 0"></a-box>
+        
+        
+
+         <!-- Pandabeer -->
+        
+    <a-entity id="pandabeer" position="-1.068 1.871 -4.339" rotation="0 0 0" scale="0.050 0.050 0.040" mixin="col1"
+        event-set__enter="[object Object]" event-set__leave="[object Object]" onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'">
+        
+      <a-sphere position="-0.07046 0.75258 -4.04106" radius="1.25" color="#000000" material="color: #ffffff" geometry="" scale="0.65 0.7 0.65" id="bibs"></a-sphere>
+      <a-sphere position="-0.07046 0.89576 -4.04106" radius="1.25" color="#000000" material="" geometry="" scale="0.65 0.7 0.65" id="borst"></a-sphere>
+      <a-sphere position="-0.07046 1.80555 -4.04106" radius="1.25" color="#000000" material="color: #ffffff" geometry="" scale="0.4 0.4 0.5" id="hoofd"></a-sphere>
+      <a-sphere position="-0.49764 2.20845 -4.04106" radius="1.25" color="#000000" material="" geometry="" scale="0.12 0.1 0.02" id="oor-1"></a-sphere>
+      <a-sphere position="0.35124 2.20845 -4.04106" radius="1.25" color="#000000" material="" geometry="" scale="0.12 0.1 0.02" id="oor-2"></a-sphere>
+      <a-sphere position="-0.26539 2.06949 -3.61486" radius="1.25" color="#000000" material="" geometry="" scale="0.05 0.05 0.05" id="oog-1"></a-sphere>
+      <a-sphere position="0.11205 2.06949 -3.61486" radius="1.25" color="#000000" material="" geometry="" scale="0.05 0.05 0.05" id="oog-2"></a-sphere>
+      <a-sphere position="-0.03715 1.9187 -3.38456" radius="1.25" color="#000000" material="" geometry="" scale="0.05 0.05 0.05" id="neus"></a-sphere>
+      <a-sphere position="-0.05429 1.87116 -3.60117" radius="1.25" color="#000000" material="color: #ffffff" geometry="" scale="0.2 0.15 0.2" id="snuit"></a-sphere>
+      <a-sphere position="-0.85328 1.62279 -3.67999" radius="1.25" color="#000000" material="" geometry="" scale="0.2 0.5 0.2" id="arm-1" rotation="45 0 45"></a-sphere>
+      <a-sphere position="0.62442 1.14338 -3.86013" radius="1.25" color="#000000" material="" geometry="" scale="0.2 0.5 0.2" id="arm-2" rotation="0 0 45"></a-sphere>
+      <a-sphere position="-0.77943 0.18015 -3.66085" radius="1.25" color="#000000" material="" geometry="" scale="0.2 0.5 0.2" id="voet-1" rotation="0 45 90"></a-sphere>
+      <a-sphere position="0.56085 0.18015 -3.66085" radius="1.25" color="#000000" material="" geometry="" scale="0.2 0.5 0.2" id="voet-2" rotation="0 135 90"></a-sphere>
+      <a-cylinder color="crimson" height="3" radius="1.5" material="color: #a0c841" geometry="" scale="0.025 0.5 0.025" position="-1.16356 1.80799 -3.43948" id="bamboe" rotation="0 0 135"></a-cylinder>
+        
+    </a-entity>
+
+
+    </a-scene>
+</body>
+
+</html>
